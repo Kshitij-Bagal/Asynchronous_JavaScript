@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Promise Example</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./Resources/KB-Dev-favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Resources/KB-DEV-Icon.PNG" alt="Logo">
+            <p class="logo_title">KB Learning <br> Hub</p>
+        </div>
+        <div class="tabs">
+            <!-- Tabs are created to navigate between different asynchronous techniques -->
+            <div id="homeTab" class="tab" data-page="index.html" onclick="navigateTo('index.html', 'homeTab')">Home</div>
+            <div id="callbackTab" class="tab" data-page="callbacks.html" onclick="navigateTo('callbacks.html', 'callbackTab')">Callback</div>
+            <div id="promiseTab" class="tab" data-page="promises.html" onclick="navigateTo('promises.html', 'promiseTab')">Promise</div>
+            <div id="asyncAwaitTab" class="tab" data-page="async-await.html" onclick="navigateTo('async-await.html', 'asyncAwaitTab')">Async/Await</div>
+        </div>
+    </header>
+    <div class="container">
+        <!-- Creating an input field for the API URL and a button to trigger the promise action -->
+        <label for="apiUrl">API URL:</label>
+        <input type="text" id="apiUrl" placeholder="https://dummyjson.com/posts" value="https://dummyjson.com/posts" />
+        <button onclick="executePromise()">Click Me</button>
+        <div id="message"></div>
+    </div>
+    <script src="./promises.js"></script>
+    <script src="./tabs.js"></script>
+</body>
+<footer>© 2024 KB Weather Services. All rights reserved.</footer>
+</html>

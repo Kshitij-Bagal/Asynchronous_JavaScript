@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Asynchronous JavaScript Techniques</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="icon" type="image/x-icon" href="./Resources/KB-Dev-favicon.ico">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="./Resources/KB-DEV-Icon.PNG" alt="Logo">
+            <p class="logo_title">KB Learning <br> Hub</p>
+        </div>
+        <div class="tabs">
+            <!-- Tabs are created to navigate between different asynchronous techniques -->
+            <div id="homeTab" class="tab" data-page="index.html" onclick="navigateTo('index.html', 'homeTab')">Home</div>
+            <div id="callbackTab" class="tab" data-page="callbacks.html" onclick="navigateTo('callbacks.html', 'callbackTab')">Callback</div>
+            <div id="promiseTab" class="tab" data-page="promises.html" onclick="navigateTo('promises.html', 'promiseTab')">Promise</div>
+            <div id="asyncAwaitTab" class="tab" data-page="async-await.html" onclick="navigateTo('async-await.html', 'asyncAwaitTab')">Async/Await</div>
+        </div>
+    </header>
+    <div class="index_container">
+        <div class="content">
+            <h2>Welcome to Asynchronous JavaScript Techniques</h2>
+            <!-- Providing an explanation of asynchronous JavaScript -->
+            <p>Asynchronous JavaScript refers to a programming paradigm in which tasks can be executed concurrently without blocking the main execution thread. In other words, asynchronous javascript allows operations to be initiated and completed independently of the main program flow, enabling non-blocking behaviour and improved performance in web applications.</p>
+
+            <img src="./Resources/Asynchronus_programming.PNG" alt="Asynchronus_programming">
+
+            <p>This page provides a brief introduction to various asynchronous programming techniques in JavaScript, including <strong>Callbacks</strong>, <strong>Promises</strong>, and <strong>Async/Await</strong>. These techniques help manage tasks that require waiting for an operation to complete, such as fetching data from an API or delaying execution.</p>
+
+            <h3>Callback Functions</h3>
+            <p>Callbacks are functions passed as arguments to other functions and are executed once a task is completed. They are commonly used to handle asynchronous tasks but can lead to complex code when multiple callbacks are nested, often referred to as "callback hell".</p>
+            <p><em>Example:</em> Setting a delay or executing code after an asynchronous event, like fetching data.</p>
+
+            <h3>Promises</h3>
+            <p>Promises provide a more structured way to handle asynchronous operations. A Promise represents a value that may be available now, in the future, or never. Promises can either be resolved or rejected, which allows chaining multiple asynchronous operations and handling errors more gracefully.</p>
+            <p><em>Example:</em> Using a Promise to fetch data from an API, showing "loading" until the data is available, and then displaying the result.</p>
+
+            <h3>Async/Await</h3>
+            <p>Async/Await syntax allows writing asynchronous code in a synchronous-looking manner. It is built on top of Promises and offers a cleaner and more readable way to handle async operations, especially when working with multiple Promises.</p>
+            <p><em>Example:</em> Using `async` functions and `await` to pause code execution until an asynchronous task completes, making the code more intuitive.</p>
+            
+            <p>Click on each tab to explore how these concepts are implemented with practical examples.</p>
+        </div>
+    </div>
+    <script src="./tabs.js"></script>
+</body>
+<footer>© 2024 KB Weather Services. All rights reserved.</footer>
+</html>
